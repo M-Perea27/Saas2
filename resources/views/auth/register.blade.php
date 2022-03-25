@@ -39,14 +39,26 @@
 
                     <x-jet-input class="form-control" type="password" name="password_confirmation" required autocomplete="new-password" />
                 </div>
+
                 <div class="mb-3">
                     <x-jet-label value="{{ __('Select User Type') }}" />
-
-                    <x-jet-dropdown id="user-select">
-                        <x-slot name="trigger">Select User</x-slot>
-                        <x-slot name="content">Select User</x-slot>
-                    </x-jet-dropdown>
+                    <x-selector id="user-select">
+                        <x-slot name="trigger"></x-slot>
+                        <x-slot name="content">
+                                <li>
+                                    <x-selector-button>User</x-selector-button>
+                                </li>
+                                <li>
+                                    <x-selector-button>Planner</x-selector-button>
+                                </li>
+                                <hr class="dropdown-divider" />
+                                <li>
+                                    <x-selector-button>Supplier</x-selector-button>
+                                </li>
+                        </x-slot>
+                    </x-selector>
                 </div>
+
                 @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                     <div class="mb-3">
                         <div class="custom-control custom-checkbox">
