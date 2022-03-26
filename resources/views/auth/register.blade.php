@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <var></var>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -46,14 +47,7 @@
                         <x-slot name="trigger"></x-slot>
                         <x-slot name="content">
                                 <li>
-                                    <x-selector-button>User</x-selector-button>
-                                </li>
-                                <li>
-                                    <x-selector-button>Planner</x-selector-button>
-                                </li>
-                                <hr class="dropdown-divider" />
-                                <li>
-                                    <x-selector-button>Supplier</x-selector-button>
+                                    <x-sel-btn value="Planner" onClick="{{ $SendValue }}"></x-sel-btn>
                                 </li>
                         </x-slot>
                     </x-selector>
