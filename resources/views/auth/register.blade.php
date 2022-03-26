@@ -6,7 +6,7 @@
 
         <x-jet-validation-errors class="mb-3" />
 
-        <div class="cardBody">
+        <div class="card-body">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
@@ -46,14 +46,14 @@
                         <x-slot name="trigger"></x-slot>
                         <x-slot name="content">
                                 <li>
-                                    <x-sel-btn onclick="{{ __SendValue() }}">User</x-sel-btn>
+                                    <x-selector-button>User</x-selector-button>
                                 </li>
                                 <li>
-                                    <x-sel-btn>Planner</x-sel-btn>
+                                    <x-selector-button>Planner</x-selector-button>
                                 </li>
                                 <hr class="dropdown-divider" />
                                 <li>
-                                    <x-sel-btn>Supplier</x-sel-btn>
+                                    <x-selector-button>Supplier</x-selector-button>
                                 </li>
                         </x-slot>
                     </x-selector>
@@ -74,14 +74,14 @@
                 @endif
 
                 <div class="mb-0">
-                    <div class="d-flex justify-content-end align-itemsBaseline">
+                    <div class="d-flex justify-content-end align-items-baseline">
                         <a class="text-muted me-3 text-decoration-none" href="{{ route('login') }}">
                             {{ __('Already registered?') }}
                         </a>
 
-                        <x-jetButton>
+                        <x-jet-button>
                             {{ __('Register') }}
-                        </x-jetButton>
+                        </x-jet-button>
                     </div>
                 </div>
             </form>
