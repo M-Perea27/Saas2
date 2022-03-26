@@ -4,10 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class selectorButton extends Component
+class SelBtn extends Component
 {
-
-    public $value;
     /**
      * Create a new component instance.
      *
@@ -25,7 +23,7 @@ class selectorButton extends Component
      */
     public function render()
     {
-        return view('components.selector-button');
+        return view('components.sel-btn');
     }
 
     public function __SendValue()

@@ -6,8 +6,6 @@ use Illuminate\View\Component;
 
 class selectorButton extends Component
 {
-
-    public $value;
     /**
      * Create a new component instance.
      *
@@ -26,10 +24,5 @@ class selectorButton extends Component
     public function render()
     {
         return view('components.selector-button');
-    }
-
-    public function __SendValue()
-    {
-        return view('welcome');
     }
 }
